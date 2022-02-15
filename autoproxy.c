@@ -229,7 +229,10 @@ static void auto_recv_timeout_cb(evutil_socket_t fd, short events, void * arg)
     redsocks_touch_client(client);
     // Let's make connection confirmed
     if (aclient->state == AUTOPROXY_CONNECTED)
-        auto_confirm_connection(client);
+        {
+    auto_retry_or_drop(client);
+    return;
+        }
     else
         return;
 
