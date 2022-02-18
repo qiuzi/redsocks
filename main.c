@@ -48,7 +48,7 @@ app_subsys *subsystems[] = {
 };
 
 static const char *confname = "/etc/redsocks/redsocks.conf";
-static const char *pidfile = NULL;
+static const char *pidfile = "/var/run/redsocks.pid";
 static struct event_base * g_event_base = NULL;
 
 static void terminate(int sig, short what, void *_arg)
