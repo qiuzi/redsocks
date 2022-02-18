@@ -47,7 +47,7 @@ app_subsys *subsystems[] = {
     &tcpdns_subsys,
 };
 
-static const char *confname = "redsocks.conf";
+static const char *confname = "/etc/redsocks/redsocks.conf";
 static const char *pidfile = NULL;
 static struct event_base * g_event_base = NULL;
 
